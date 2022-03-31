@@ -146,7 +146,7 @@
                         <div class="row">
                             @foreach ($projet->images as $image)
                                 <div class="col-sm-6 col-md-3 col-lg-3">
-                                    <img src="{{ asset($image->path) }}" alt="{{ $projet->nom }}" srcset="{{ $projet->nom }}" width="100%">
+                                    <img src="{{ asset($image->path) }}" alt="{{ $projet->nom }}"  width="100%">
                                     <div class="row text-center">
                                         <a href=" {{ route('imageDel', $image->id) }} " class="btn btn-danger mt-15 mb-30">Supprimer</a>
                                     </div>

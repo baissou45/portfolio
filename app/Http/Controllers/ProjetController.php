@@ -29,12 +29,12 @@ class ProjetController extends Controller
         ]);
 
         if ($validator->fails()) {
-            dd($validator);
+            // dd($validator);
             return redirect()->back()->withErrors($validator)->withInput();
         } else {
 
             if($request->hasfile('cover')){
-                $path = $request->file('cover')->store('public/images/' . $request->nom . '/cover');
+                $request->cover->move(public_path('projets/' . $request->nom . '/cover/'), $request->cover->getClientOriginalName());
             }
 
             $projet = Projet::create([
@@ -45,19 +45,20 @@ class ProjetController extends Controller
                 'date' => $request->date,
                 'lien' => $request->lien,
                 'description' => $request->description,
-                'cover' => "storage/" . substr($path, 7)
+                'cover' => 'projets/' . $request->nom . '/cover/' . $request->cover->getClientOriginalName()
             ]);
 
             if($request->hasfile('images')){
 
                 foreach($request->file('images') as $key => $file){
 
-                    $path = $file->store('public/images/' . $request->nom);
+                    $file->move(public_path('projets/' . $request->nom), $file->getClientOriginalName());
 
                     Image::create([
-                        'path' => "storage/" . substr($path, 7),
+                        'path' => 'projets/' . $request->nom . '/' . $file->getClientOriginalName(),
                         'projet_id' => $projet->id
                     ]);
+
                 }
             }
 

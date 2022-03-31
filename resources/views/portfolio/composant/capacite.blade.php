@@ -1,7 +1,7 @@
 <section id="profile_sec" class="profile-sec sec-pad-top-sm">
     <h2 class="mb-30">Ce que je fais</h2>
     <div class="row">
-gi
+
         <div class="col-xs-6 col-md-3 col-sm-6 col-xs-12 mb-30">
             <div class="mdl-card mdl-shadow--2dp">
                 <i class="zmdi zmdi-format-color-fill font-blue profile-icon"></i>

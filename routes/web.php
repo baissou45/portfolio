@@ -7,6 +7,7 @@ use App\Http\Controllers\ProjetController;
 use App\Models\Competence;
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\Image;
 use App\Models\Projet;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('a', function () {
-    return view('welcome');
+    $projets = Projet::all();
+
+    foreach ($projets as $key => $projet) {
+        $projet->update([
+            'cover' => 'projets' . substr($projet->cover, 14)
+        ]);
+    }
+
 });
 
 Route::get('/', function () {
@@ -41,13 +49,13 @@ Route::get('/competences', function(){
     return view('lib.competence.more', compact('competences'));
 })->name('competences.more');
 
+Route::resource('projet', ProjetController::class);
 
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('competence', CompetenceController::class);
     Route::resource('experience', ExperiencesController::class);
     Route::resource('education', EducationController::class);
-    Route::resource('projet', ProjetController::class);
 
     Route::get('imgSup/{image}', [ProjetController::class, 'imageDel'])->name('imageDel');
 
