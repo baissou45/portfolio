@@ -7,10 +7,6 @@
             <!-- Title -->
             <ul class="nav mdl-navigation mdl-layout--large-screen-only">
                 <li><a class="mdl-navigation__link" href="{{ route('dashboard') }}">Accueuil</a></li>
-                {{-- <li><a class="mdl-navigation__link" data-scroll href="#skills_sec">Compétences</a></li>
-                <li><a class="mdl-navigation__link" data-scroll href="#portfolio_sec">Projets</a></li>
-                <li><a class="mdl-navigation__link" data-scroll href="#experience_sec">Experience</a></li>
-                <li><a class="mdl-navigation__link" data-scroll href="#education_sec">Education</a></li> --}}
             </ul>
         @else
             <ul class="nav mdl-navigation mdl-layout--large-screen-only">
