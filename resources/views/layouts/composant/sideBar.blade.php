@@ -2,7 +2,7 @@
     <div class="nicescroll-bar">
         <div class="drawer-profile-wrap">
             <div class="candidate-img-drawer mt-25 mb-20"></div>
-            <span class="candidate-name block mb-10 text-center">benjamin sirge</span>
+            <span class="candidate-name block mb-10 text-center">Taïrou Baïssou</span>
             <ul class="social-icons  mb-30">
                 <li>
                     <a class="facebook-link" href="https://m.facebook.com/baissou45?ref=bookmarks">
