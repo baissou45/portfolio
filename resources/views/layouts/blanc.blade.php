@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>TAIROU Baïssou</title>
 		<meta name="description" content="Taïrou Baïssou, développeur web full stack, développeur mobile" />
-		<meta name="keywords" content="TAIROU Baïssou, Taïrou Baïssou, TAIROU Baissou, Tairou Baïssou, Tairou Baissou,développeur bénin, bénin, développeur, développeur web, développeur mobile, Portfolio, développeur api, e-commerce" />
+		<meta name="keywords" content="TAIROU Baïssou, Taïrou Baïssou, TAIROU Baissou, Tairou Baïssou, Tairou Baissou,développeur bénin, bénin, développeur, développeur web, développeur mobile, Portfolio, développeur api, e-commerce, my-app-portfolio, my-app" />
 		<meta name="author" content="Taïrou Baïssou"/>
 
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
