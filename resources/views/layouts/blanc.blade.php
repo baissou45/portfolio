@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="fr" class="no-js adapt">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -8,8 +8,25 @@
 		<meta name="keywords" content="TAIROU Baïssou, Taïrou Baïssou, TAIROU Baissou, Tairou Baïssou, Tairou Baissou,développeur bénin, bénin, développeur, développeur web, développeur mobile, développeur api, e-commerce" />
 		<meta name="author" content="Taïrou Baïssou"/>
 
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='description' content='Assassinat, tentative d&#039;assassinat et complicité' />
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1' />
+        <meta property='fb:app_id' content='7980975205212750' />
+        <meta property='og:url' content='http://my-app-portfolio.herokuapp.com/' />
+        <meta property='og:type' content='portfolio' />
+        <meta property='og:title' content='Baïssou TAÏROU | Développeur web et mobile' data-dynamic='true' />
+        <meta property='og:description' content='Développeur web fullstack avec laravel et développeur mobile avec flutter' data-dynamic='true' />
+        <meta property='og:image' content='{{ asset('html/img/avatar.png') }}' data-dynamic='true' />
+        <meta property='og:image:width' content='256' data-dynamic='true'><meta property='og:image:height' content='256' data-dynamic='true'><meta property='og:locale' content='fr_FR' />
+        <meta property='og:site_name' content='Baïssou TAÏROU | Développeur web et mobile' />
+        <meta property='twitter:url' content='http://my-app-portfolio.herokuapp.com/' />
+        <meta property='twitter:card' content='summary' />
+        <meta property='twitter:title' content='Baïssou TAÏROU | Développeur web et mobile' />
+        <meta property='twitter:description' content='Développeur web fullstack avec laravel et développeur mobile avec flutterAssassinat, tentative d&#039;assassinat et complicitéDéveloppeur web fullstack avec laravel et développeur mobile avec flutter' />
+        <meta property='twitter:image' content='{{ asset('html/img/avatar.png') }}' />
+
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="{{ asset('icon.jpeg') }}" type="image/x-icon">
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="{{ asset('html/css/style.css') }}" />
 	</head>
