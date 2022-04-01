@@ -51,6 +51,10 @@ Route::get('/competences', function(){
 
 Route::resource('projet', ProjetController::class);
 
+Route::get('projets/all', function(){
+    return view('lib.projet.more', ['projets' => Projet::all()]);
+})->name('projet.more');
+
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('competence', CompetenceController::class);

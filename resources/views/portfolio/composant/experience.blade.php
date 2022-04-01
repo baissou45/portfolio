@@ -1,6 +1,6 @@
 <section id="experience_sec" class="experience-sec sec-pad-top-sm">
     <h2 class="mb-30">experience</h2>
-    <div class="timeline-wrap  overflow-hide mb-30">
+    <div class="timeline-wrap overflow-hide mb-30">
         <ul class="timeline">
 
             @php

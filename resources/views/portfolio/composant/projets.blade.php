@@ -13,18 +13,19 @@
         </div>
         <div class="clearfix"></div>
     </div>
+
     <div class="gallery-wrap mb-30">
         <div class="portfolio-wrap project-gallery">
             <ul id="portfolio" class="portf auto-construct  project-gallery" data-col="3">
 
-                {{-- @php
+                @php
                     $a = 0;
                     $b = 0;
-                @endphp --}}
+                @endphp
 
 
                 @for ($i = 0; $i < count($projets); $i++)
-                    {{-- @if ($projets[$i]->type == 'web') --}}
+                    @if ($projets[$i]->type == 'web')
                         <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projets[$i]->type }}">
                             <div class="pt-10 pb-10 card-header text-center">
                                 <span class="text-primary"> {{ $projets[$i]->nom }} </span>
@@ -39,17 +40,17 @@
                                 <a href="{{ route('projet.show', $projets[$i]->id) }}"><i class="zmdi zmdi-eye"></i></a>
                             </span>
                         </li>
-                    {{-- @php
+                    @php
                         $a++;
                         if ( $a > 2 ) {
                             break;
                         }
                     @endphp
-                    @endif --}}
+                    @endif
                 @endfor
 
 
-                {{-- @for ($j = 0; $j < count($projets); $j++)
+                @for ($j = 0; $j < count($projets); $j++)
                     @if ($projets[$j]->type == 'mobile')
                         <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projets[$j]->type }}">
                             <div class="pt-10 pb-10 card-header text-center">
@@ -72,10 +73,15 @@
                         }
                     @endphp
                     @endif
-                @endfor --}}
+                @endfor
 
             </ul>
 
         </div>
     </div>
+
+    <div class="text-center">
+        <a href="{{ route('projet.more') }}" class="btn btn-primary">Voir plus</a>
+    </div>
+
 </section>

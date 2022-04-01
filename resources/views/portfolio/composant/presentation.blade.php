@@ -63,30 +63,30 @@
                             </div>
                         </div>
                         <ul class="profile-wrap mt-50">
-                            <li>
-                                <div class="profile-title">age</div>
+                            <li class="row">
+                                <div class="profile-title col-xs-4">age</div>
                                 <div class="profile-desc"> {{ now()->year - 1998 }} ans </div>
                             </li>
-                            <li>
-                                <div class="profile-title">address</div>
+                            <li class="row">
+                                <div class="profile-title col-xs-4">address</div>
                                 <div class="profile-desc">
                                     Cotonou - Bénin | Cadjèhoun
                                 </div>
                             </li>
-                            <li>
-                                <div class="profile-title">e-Mail</div>
+                            <li class="row">
+                                <div class="profile-title col-xs-4">e-Mail</div>
                                 <div class="profile-desc">
                                     <a href="mailto:tbaissou@gmail.com">tbaissou@gmail.com</a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="profile-title">contact</div>
+                            <li class="row">
+                                <div class="profile-title col-xs-4">contact</div>
                                 <div class="profile-desc">
                                     <a href="tel:+229 65 92 40 99">+229 65 92 40 99</a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="profile-title">freelance</div>
+                            <li class="row">
+                                <div class="profile-title col-xs-4">freelance</div>
                                 <div class="profile-desc relative">Disponible
                                     <i id="datepickopn" class="zmdi zmdi-calendar-check font-green pl-5"></i>
                                     <div id='datepicker1' class='datepicker'></div>

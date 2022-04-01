@@ -1,4 +1,4 @@
-@extends('layouts.blanc')
+@extends('layouts.moreBlanc')
 
 @section('contenu')
 
