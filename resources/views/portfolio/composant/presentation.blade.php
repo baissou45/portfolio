@@ -53,10 +53,18 @@
                             <h1 class='h1 extrabold'>
                                 <Strong> TAIROU Baïssou </Strong>
                             </h1>
-                            <h5 class="mt-20 font-grey">
+                            {{-- <h5 class="mt-20 font-grey">
                                 Developpeur web full stack <br>
                                 Developpeur mobile
-                            </h5>
+                            </h5> --}}
+                            <span>
+                                Je suis <strong class="text-primary"> Taïrou Baïssou </strong>, un <strong class="text-primary"> développeur web Fullstack Laravel </strong> et
+                                <strong class="text-primary"> développeur mobile avec Flutter </strong>.
+                                Je suis passionné par la création d'applications exceptionnelles qui répondent aux besoins de mes clients et offrent une
+                                expérience utilisateur inoubliable. Je m'efforce de trouver des solutions innovantes et élégantes pour chaque
+                                projet, en utilisant mes compétences en développement pour concevoir des applications performantes et fonctionnelles.
+                                Si vous recherchez un développeur engagé et motivé pour votre prochain projet, n'hésitez pas à me contacter.
+                            </span>
                             <div class="mt-30">
                                 <a id="download_cv" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  bg-green font-white mr-10" href="{{ asset('cv.pdf') }}">Voir mon cv</a>
                                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect bg-blue font-white" href="mailto:tbaissou@gmail.com" target="#blanc">Me contacter</a>
