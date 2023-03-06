@@ -58,8 +58,8 @@
                                 Developpeur mobile
                             </h5> --}}
                             <span>
-                                Je suis <strong class="text-primary"> Taïrou Baïssou </strong>, un <strong class="text-primary"> développeur web Fullstack Laravel </strong> et
-                                <strong class="text-primary"> développeur mobile avec Flutter </strong>.
+                                Je suis <span class="text-primary"> Taïrou Baïssou </span>, un <span class="text-primary"> développeur web Fullstack Laravel </span> et
+                                <span class="text-primary"> développeur mobile avec Flutter</span>.
                                 Je suis passionné par la création d'applications exceptionnelles qui répondent aux besoins de mes clients et offrent une
                                 expérience utilisateur inoubliable. Je m'efforce de trouver des solutions innovantes et élégantes pour chaque
                                 projet, en utilisant mes compétences en développement pour concevoir des applications performantes et fonctionnelles.
