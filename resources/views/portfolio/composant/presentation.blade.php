@@ -50,8 +50,10 @@
                     </div>
                     <div class="col-md-7 col-xs-12">
                         <div class="info-wrap">
-                            <h1 class='h1 extrabold'>
-                                <Strong> TAIROU Baïssou </Strong>
+                            <h1 class='h1 extrabold mb-35'>
+                                <Strong> TAIROU Baïssou </Strong> <br>
+                                Developpeur web full stack <br>
+                                Developpeur mobile
                             </h1>
                             {{-- <h5 class="mt-20 font-grey">
                                 Developpeur web full stack <br>

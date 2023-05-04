@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 class ExperiencesController extends Controller
 {
     public function index(){
-        $experiences = Experience::all();
+        $experiences = Experience::get();
         return view('lib.experience.list', compact("experiences"));
     }
 

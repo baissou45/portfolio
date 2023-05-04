@@ -36,7 +36,7 @@ Route::get('a', function () {
 Route::get('/', function () {
 
     $competences = Competence::all();
-    $experiences = Experience::all();
+    $experiences = Experience::orderBy('id', 'desc')->get();
     $educations = Education::all();
     $projets = Projet::all();
 

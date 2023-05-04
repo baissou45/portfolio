@@ -16,14 +16,14 @@
         <meta property='og:type' content='portfolio' />
         <meta property='og:title' content='Baïssou TAÏROU | Développeur web et mobile' data-dynamic='true' />
         <meta property='og:description' content='Développeur web fullstack avec laravel et développeur mobile avec flutter' data-dynamic='true' />
-        <meta property='og:image' content='{{ asset('html/img/avatar.png') }}' data-dynamic='true' />
+        <meta property='og:image' content='{{ asset('html/img/avatar.jpeg') }}' data-dynamic='true' />
         <meta property='og:image:width' content='256' data-dynamic='true'><meta property='og:image:height' content='256' data-dynamic='true'><meta property='og:locale' content='fr_FR' />
         <meta property='og:site_name' content='Baïssou TAÏROU | Développeur web et mobile' />
         <meta property='twitter:url' content='http://my-app-portfolio.herokuapp.com/' />
         <meta property='twitter:card' content='summary' />
         <meta property='twitter:title' content='Baïssou TAÏROU | Développeur web et mobile' />
         <meta property='twitter:description' content='Développeur web fullstack avec laravel et développeur mobile avec flutterAssassinat, tentative d&#039;assassinat et complicitéDéveloppeur web fullstack avec laravel et développeur mobile avec flutter' />
-        <meta property='twitter:image' content='{{ asset('html/img/avatar.png') }}' />
+        <meta property='twitter:image' content='{{ asset('html/img/avatar.jpeg') }}' />
 
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="icon" href="{{ asset('icon.jpeg') }}" type="image/x-icon">
