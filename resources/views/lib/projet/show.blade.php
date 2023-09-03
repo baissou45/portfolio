@@ -1,4 +1,5 @@
-@extends('layouts.blanc')
+{{-- @extends('layouts.blanc') --}}
+@extends('layouts.moreBlanc')
 
 @section('contenu')
 
@@ -52,12 +53,7 @@
                     <div class="mdl-card__supporting-text relative pt-50 pb-10">
                         <div class="row">
                             <div class="col-md-8 mb-30">
-                                <h4 class="mb-5">Description</h4>
                                 <p>{!! $projet->description !!}.</p>
-                            </div>
-                            <div class="col-md-4 mb-30">
-                                <h4 class="mb-5">client</h4>
-                                <p> {{ $projet->client }} </p>
                             </div>
 
                             <div class="col-md-4 mb-30">
@@ -65,17 +61,41 @@
                                     {{ $projet->type }}
                                 </a>
                                 <ul class="brif-links-wrap mt-25">
+
+                                    @if ($projet->client)
                                     <li class="mb-10 font-capitalize">
-                                        <i class="zmdi zmdi-calendar-note pr-10"></i><span>21.1.17</span>
+                                        <i class="zmdi zmdi-format-align-justify pr-10"></i>
+                                        <span> {{ $projet->client }} </span>
                                     </li>
+                                    @endif
+
+                                    @if ($projet->date)
+                                    <li class="mb-10 font-capitalize">
+                                        <i class="zmdi zmdi-calendar-note pr-10"></i>
+                                        <span> {{ $projet->date->format('d M Y') }} </span>
+                                    </li>
+                                    @endif
+
+                                    @if ($projet->equipe)
                                     <li class="mb-10 font-capitalize">
                                         <i class="zmdi zmdi-accounts-alt pr-10"></i>
-                                        <span>themeforest</span>
+                                        <span> {{ $projet->equipe }} </span>
                                     </li>
-                                    <li class="font-capitalize">
+                                    @endif
+
+                                    @if ($projet->technologies)
+                                    <li class="mb-10 font-capitalize">
                                         <i class="zmdi zmdi-label-alt-outline pr-10"></i>
-                                        <span>design</span>
+                                        <span> {{ $projet->technologies }} </span>
                                     </li>
+                                    @endif
+
+                                    @if ($projet->lien)
+                                    <li class="font-capitalize mt-1">
+                                        <i class="zmdi zmdi-link pr-10"></i>
+                                        <a href="{{ $projet->lien }}" target="_blanc"> <span class="text-primary underline"> {{ $projet->lien }} </span> </a>
+                                    </li>
+                                    @endif
                                 </ul>
                             </div>
 

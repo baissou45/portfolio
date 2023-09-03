@@ -18,7 +18,7 @@
                             <th class="text-center">Nom</th>
                             <th class="text-center">Platforme</th>
                             <th class="text-center">Client</th>
-                            <th class="text-center">Description</th>
+                            <th class="text-center">Equipe</th>
                             <th class="text-center">Type</th>
                             <th class="text-center">Images</th>
                             <th class="text-center">Action</th>
@@ -31,7 +31,8 @@
                             <td class="text-center" scope="row"> {{ $projet->nom }} </td>
                             <td class="text-center" scope="row"> {{ $projet->platforme }} </td>
                             <td class="text-center" scope="row"> {{ $projet->client }} </td>
-                            <td class="text-center" scope="row"> {{ Str::limit($projet->description, 50, '...') }} </td>
+                            <td class="text-center" scope="row"> {{ $projet->equipe ?? "#" }} </td>
+                            {{-- <td class="text-center" scope="row"> {{ Str::limit($projet->description, 50, '...') }} </td> --}}
                             <td class="text-center" scope="row"> {{ $projet->type }} </td>
                             <td class="text-center" scope="row"> {{ count($projet->images) }} </td>
                             <td class="text-center">

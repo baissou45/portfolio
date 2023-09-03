@@ -7,6 +7,7 @@
                 <li><a id="all" href="#" data-filter="*" class="active">Tous</a></li>
                 <li><a href="#" data-filter=".web">web</a></li>
                 <li><a href="#" data-filter=".mobile">mobile</a></li>
+                <li><a href="#" data-filter=".package">package</a></li>
             </ul>
             <!--/Portfolio Filters -->
             <div class="clearfix"></div>
@@ -18,62 +19,30 @@
         <div class="portfolio-wrap project-gallery">
             <ul id="portfolio" class="portf auto-construct  project-gallery" data-col="3">
 
-                @php
-                    $a = 0;
-                    $b = 0;
-                @endphp
+                @foreach ($projets as $type => $projet)
+                    @foreach ($projets[$type] as $projet)
 
+                        @if ($loop->iteration > 3)
+                        @break
+                        @endif
 
-                @for ($i = 0; $i < count($projets); $i++)
-                    @if ($projets[$i]->type == 'web')
-                        <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projets[$i]->type }}">
+                        <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projet->type }}">
                             <div class="pt-10 pb-10 card-header text-center">
-                                <span class="text-primary"> {{ $projets[$i]->nom }} </span>
+                                <span class="text-primary"> {{ $projet->nom }} </span>
                             </div>
                             <div class="light-img-wrap mdl-card__title pa-0">
-                                <a href="{{ route('projet.show', $projets[$i]->id) }}">
-                                    <img class="img-responsive" src="{{ asset( $projets[$i]->cover ) }}"  alt="Image description" />
+                                <a href="{{ route('projet.show', $projet->id) }}">
+                                    <img class="img-responsive" src="{{ asset( $projet->cover ) }}"  alt="Image description" />
                                     <div class="light-img-overlay"></div>
                                 </a>
                             </div>
                             <span class="bottom-links mdl-card__actions">
-                                <a href="{{ route('projet.show', $projets[$i]->id) }}"><i class="zmdi zmdi-eye"></i></a>
+                                <a href="{{ route('projet.show', $projet->id) }}"><i class="zmdi zmdi-eye"></i></a>
                             </span>
                         </li>
-                    @php
-                        $a++;
-                        if ( $a > 2 ) {
-                            break;
-                        }
-                    @endphp
-                    @endif
-                @endfor
 
-
-                @for ($j = 0; $j < count($projets); $j++)
-                    @if ($projets[$j]->type == 'mobile')
-                        <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projets[$j]->type }}">
-                            <div class="pt-10 pb-10 card-header text-center">
-                                <span class="text-primary"> {{ $projets[$j]->nom }} </span>
-                            </div>
-                            <div class="light-img-wrap mdl-card__title pa-0">
-                                <a href="{{ route('projet.show', $projets[$j]->id) }}">
-                                    <img class="img-responsive" src="{{ asset( $projets[$j]->cover ) }}"  alt="Image description" />
-                                    <div class="light-img-overlay"></div>
-                                </a>
-                            </div>
-                            <span class="bottom-links mdl-card__actions">
-                                <a href="{{ route('projet.show', $projets[$j]->id) }}"><i class="zmdi zmdi-eye"></i></a>
-                            </span>
-                        </li>
-                    @php
-                        $b++;
-                        if ( $b > 2 ) {
-                            break;
-                        }
-                    @endphp
-                    @endif
-                @endfor
+                    @endforeach
+                @endforeach
 
             </ul>
 

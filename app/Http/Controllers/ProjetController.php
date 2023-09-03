@@ -22,7 +22,7 @@ class ProjetController extends Controller
 
         $validator = Validator::make($request->all(),[
             'nom' => 'required',
-            'platforme' => 'required',
+            'technologies' => 'required',
             'description' => 'required',
             'images.*' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
             'cover' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
@@ -37,14 +37,9 @@ class ProjetController extends Controller
                 $request->cover->move(public_path('projets/' . $request->nom . '/cover/'), $request->cover->getClientOriginalName());
             }
 
-            $projet = Projet::create([
-                'nom' => $request->nom,
-                'platforme' => $request->platforme,
-                'client' => $request->client,
-                'type' => $request->type,
-                'date' => $request->date,
-                'lien' => $request->lien,
-                'description' => $request->description,
+            $projet = Projet::create($request->all());
+
+            $projet->update([
                 'cover' => 'projets/' . $request->nom . '/cover/' . $request->cover->getClientOriginalName()
             ]);
 
@@ -81,13 +76,13 @@ class ProjetController extends Controller
 
         $validator = Validator::make($request->all(),[
             'nom' => 'required',
-            'platforme' => 'required',
+            'technologies' => 'required',
             'description' => 'required',
             'images.*' => 'image|mimes:jpg,png,jpeg,gif,svg',
         ]);
 
         if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         } else {
 
             $projet->update($request->all());

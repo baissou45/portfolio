@@ -16,11 +16,12 @@ class CreateProjetsTable extends Migration
         Schema::create('projets', function (Blueprint $table) {
             $table->id();
             $table->string('nom')->nullable();
-            $table->string('platforme')->nullable();
+            $table->string('technologies')->nullable();
             $table->string('client')->nullable();
             $table->string('type')->nullable();
             $table->string('cover')->nullable();
             $table->string('lien')->nullable();
+            $table->integer('equipe')->unsigned()->nullable();
             $table->text('description')->nullable();
             $table->date('date')->nullable();
             $table->timestamps();

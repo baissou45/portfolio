@@ -38,7 +38,7 @@ Route::get('/', function () {
     $competences = Competence::all();
     $experiences = Experience::orderBy('id', 'desc')->get();
     $educations = Education::all();
-    $projets = Projet::all();
+    $projets = Projet::all()->groupBy('type');
 
     return view('portfolio.portfolio', compact('competences','experiences','educations','projets'));
 

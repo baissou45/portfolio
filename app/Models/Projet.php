@@ -11,13 +11,18 @@ class Projet extends Model{
 
     protected $fillable = [
         'nom',
-        'platforme',
+        'technologies',
+        'equipe',
         'client',
         'description',
         'date',
         'type',
         'cover',
         'lien'
+    ];
+
+    protected $casts = [
+        'date' => 'datetime',
     ];
 
     public function images(){
