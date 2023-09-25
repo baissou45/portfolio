@@ -36,8 +36,8 @@ Route::get('a', function () {
 Route::get('/', function () {
 
     $competences = Competence::all();
-    $experiences = Experience::orderBy('id', 'desc')->get();
-    $educations = Education::all();
+    $experiences = Experience::orderByDesc('id')->get();
+    $educations = Education::orderByDesc('id')->get();
     $projets = Projet::all()->groupBy('type');
 
     return view('portfolio.portfolio', compact('competences','experiences','educations','projets'));
@@ -52,7 +52,7 @@ Route::get('/competences', function(){
 Route::resource('projet', ProjetController::class);
 
 Route::get('projets/all', function(){
-    return view('lib.projet.more', ['projets' => Projet::all()]);
+    return view('lib.projet.more', ['projets' => Projet::all()->groupBy('type')]);
 })->name('projet.more');
 
 Route::middleware(['auth'])->group(function () {

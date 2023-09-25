@@ -80,7 +80,7 @@
                             <li class="row">
                                 <div class="profile-title col-xs-4">address</div>
                                 <div class="profile-desc">
-                                    Cotonou - Bénin | Cadjèhoun
+                                    3e Rue Georges Bernanos, 31100 Toulouse
                                 </div>
                             </li>
                             <li class="row">
@@ -92,7 +92,7 @@
                             <li class="row">
                                 <div class="profile-title col-xs-4">contact</div>
                                 <div class="profile-desc">
-                                    <a href="tel:+229 65 92 40 99">+229 65 92 40 99</a>
+                                    <a href="tel:+229 65 92 40 99">+33 6 05 71 19 28</a>
                                 </div>
                             </li>
                             <li class="row">

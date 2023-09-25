@@ -2,14 +2,9 @@
     <h2 class="mb-30">experience</h2>
     <div class="timeline-wrap overflow-hide mb-30">
         <ul class="timeline">
-
-            @php
-                $a = false;
-            @endphp
-
             @foreach ($experiences as $experience)
 
-                <li class="{{ $a ? "timeline-inverted" : "" }}">
+                <li class="{{ ($loop->iteration % 2) == 0 ? "timeline-inverted" : "" }}">
                     <div class="timeline-badge">
                         <i class="zmdi zmdi-{{ $experience->icon }}  font-{{ $experience->couleur }} "></i>
                     </div>
@@ -24,10 +19,6 @@
                         </div>
                     </div>
                 </li>
-
-                @php
-                    $a = !$a;
-                @endphp
 
             @endforeach
 

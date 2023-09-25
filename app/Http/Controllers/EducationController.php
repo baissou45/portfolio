@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 class EducationController extends Controller{
 
     public function index(){
-        $educations = Education::all();
+        $educations = Education::orderByDesc('id')->get();
         return view('lib.education.list', compact('educations'));
     }
 

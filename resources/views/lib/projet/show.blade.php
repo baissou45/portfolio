@@ -43,7 +43,9 @@
                             <div class="carousel-inner">
                                 @for ($i = 0; $i < count($projet->images); $i++)
                                     <div class="{{ $i == 0 ? 'active item' : "item" }}">
-                                        <img src="{{ asset($projet->images[$i]->path) }}" class="{{ $projet->type == 'mobile' ? "h-10 w-10" : "w-100" }} d-block text-center" height="{{ $projet->type == 'mobile' ? "50 px" : "" }}" alt="{{ $projet->nom }}">
+                                        <center>
+                                            <img src="{{ asset($projet->images[$i]->path) }}" class="{{ $projet->type == 'mobile' ? "h-10 w-10" : "w-100" }} d-block text-center" height="{{ $projet->type == 'mobile' ? "50%" : "" }}" alt="{{ $projet->nom }}">
+                                        </center>
                                     </div>
                                 @endfor
                             </div>

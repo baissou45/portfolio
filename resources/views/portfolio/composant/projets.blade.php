@@ -10,14 +10,14 @@
                 <li><a href="#" data-filter=".package">package</a></li>
             </ul>
             <!--/Portfolio Filters -->
-            <div class="clearfix"></div>
+            {{-- <div class="clearfix"></div> --}}
         </div>
         <div class="clearfix"></div>
     </div>
 
     <div class="gallery-wrap mb-30">
         <div class="portfolio-wrap project-gallery">
-            <ul id="portfolio" class="portf auto-construct  project-gallery" data-col="3">
+            <ul id="portfolio" class="portf auto-construct project-gallery">
 
                 @foreach ($projets as $type => $projet)
                     @foreach ($projets[$type] as $projet)
@@ -26,13 +26,13 @@
                         @break
                         @endif
 
-                        <li  class="item mdl-card mdl-shadow--2dp pa-0 {{ $projet->type }}">
+                        <li class="item mdl-card mdl-shadow--2dp pa-0 {{ $projet->type }}">
                             <div class="pt-10 pb-10 card-header text-center">
                                 <span class="text-primary"> {{ $projet->nom }} </span>
                             </div>
                             <div class="light-img-wrap mdl-card__title pa-0">
                                 <a href="{{ route('projet.show', $projet->id) }}">
-                                    <img class="img-responsive" src="{{ asset( $projet->cover ) }}"  alt="Image description" />
+                                    <img class="img-responsive" src="{{ asset( $projet->cover ) }}"  alt="Image description" style="{{ $projet->type != "mobile" ? "height: 150px" : "100%" }}" />
                                     <div class="light-img-overlay"></div>
                                 </a>
                             </div>
